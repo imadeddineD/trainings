@@ -1,0 +1,213 @@
+@import url('https://fonts.googleapis.com/css2?family=Goldman:wght@400;700&family=PT+Sans:ital,wght@0,400;0,700;1,400;1,700&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100dvw;
+  overflow-x: hidden;
+  height: 100%;
+  /* padding-right: 1px; btn-red .grid btn-yellow */
+}
+
+.font-arial {
+   font-family: Arial, sans-serif;
+}
+
+.courses-cover-img {
+  background-image: url("/imgs/Courses/099.png");
+  height: 350px;
+  background-size: cover;
+}
+
+.course-details p, .course-details ul {
+  margin-bottom: 24px;
+}
+.course-details ul li {
+  margin-left: 35px;
+}
+
+@layer utilities {
+  .flex-center {
+    @apply flex items-center justify-center
+  }
+
+  .header-nav a:not(.active) {
+    @apply text-[#FFFFFFBD] hover:text-white hover:duration-300
+  }
+
+  .course-table .title {
+    @apply text-[#9A103C]  capitalize font-normal xl:mr-[38px] lg:m-0 mr-2
+  }
+  .course-table .body {
+    @apply text-[#2C3C58] mr-2;
+  }
+  .course-details h3 {
+    @apply text-[#9A103C] font-bold
+  }
+  .course-details h4 {
+    @apply text-[#2C3C58] font-bold inline-block
+  }
+
+  .courses-btn {
+  @apply bg-[#FAD422] text-black p-2 rounded duration-300 hover:bg-[#e6c112];
+  box-shadow: 0px 4px 4px 0px #00000040;
+}
+  .btn-red {
+    @apply bg-[#DA0E29] rounded-[8px] text-white hover:bg-[#9A103C] xl:text-2xl text-xl font-[700]  duration-300
+  }
+  .btn-yellow {
+    @apply rounded-[8px] text-white font-bold xl:text-2xl text-xl bg-[#FCBB19] hover:bg-[#e0a800] xl:px-[34px] xl:py-[15px]
+    px-[30px] py-[12px]  duration-300
+  }
+
+  /* spin-slow   custom    yellow darkRed text-red blue img-cont container-px */
+
+  .assessment-btn {
+    @apply w-full leading-none bg-[#ffd32c] border-2 border-[#024954] rounded-[10px] h-[40px] opacity-80 hover:!opacity-100
+    text-center text-[#05707f] text-[18px]
+  }
+  
+  .container-px {
+    @apply 2xl:px-16 xl:px-11 md:px-9 sm:px-6 px-5
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #999;
+  border-radius: 10px;
+  transition: background-color 0.2s ease;
+}
+
+::-webkit-scrollbar-track {
+  background-color: #f0f0f0;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #666;
+}
+ 
+/* Firefox only */
+@-moz-document url-prefix() {
+  html, body {
+    scrollbar-width: thin;
+  }
+}
+
+
+
+@media (min-width: 1024px) and (max-width: 1279px) {
+  header .nav-container {
+    height: 52px;
+  }
+  .header-nav a {
+    font-size: 12px;
+  }
+  header .path-container .home-h2-container {
+    font-size: 24px;
+    padding-top: 18px;
+    padding-bottom: 18px;
+  }
+
+  .btn-red {
+    font-size: 20px;
+    width: 120px;
+  }
+
+  #places-section .places-headings {
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  #places-section .places-headings h2 {
+    font-size: 35px;
+  }
+  #places-section .places-headings p {
+    font-size: 20px;
+  }
+  .places-carousel {
+    height: 350px;
+  }
+  .places-carousel .places-slide:hover {
+    width: 340px !important;
+  }
+
+  #skills-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    gap: 28px;
+  }
+  .skills-headings h2 {
+    font-size: 24px;
+  }
+  .skills-headings h3 {
+    font-size: 28px;
+  }
+  .skills-headings img {
+    left: 23px;
+    bottom: -18px;
+  }
+}
+
+
+
+.course-content-section h3 {
+  font-weight: 600;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+  color: #2c3e50;
+  border-bottom: 1px solid #eaeaea;
+  padding-bottom: 0.5rem;
+}
+
+.course-content-section p {
+  margin-bottom: 1rem;
+  line-height: 1.6;
+}
+
+.course-content-section ol {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  list-style-type: decimal;
+}
+
+.course-content-section ul {
+  margin-left: 1.5rem;
+  margin-bottom: 1.5rem;
+  list-style-type: disc;
+} 
+
+.course-content-section li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.course-content-section li::marker {
+  color: #d92b4c;
+  font-weight: bold;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.spin-slow {
+  animation: spin 9s linear infinite;
+}
+
+.special {
+  font-family: 'Times New Roman', Times, serif;
+}
